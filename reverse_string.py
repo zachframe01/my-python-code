@@ -23,16 +23,10 @@ elif x == False :
 
 while True:
     usr_str = input("enter your input: ")
-
     if usr_str.lower() in ["done", "d"]:
-        
-        break   # this exits the loop (program ends)
+        break  # this exits the loop (program ends)
     else:
-        # print in reverse
-        for char in reversed(usr_str):
-            print(char)
-
-
+        print(usr_str[::-1])
 
 
     
