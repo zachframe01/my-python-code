@@ -27,10 +27,12 @@ print(f"{item_name:+>12}")
 air_temperature = float(input("enter air temp:"))
 
 print(f"Temperature: {air_temperature:.4f}C")
-'''
 
+#new assignment
 #stripping whitespace
 
 text = "   / hello world /   "
 print(text)
 print(text.strip())
+'''
+
