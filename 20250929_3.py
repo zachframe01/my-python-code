@@ -1,59 +1,42 @@
-"""Character counter homework.
+""""Write a program whose input is a string 
+which contains a character and a phrase, and
+ whose output indicates the number of times 
+ the character appears in the phrase. 
+ The output should include the input character 
+ and use the plural form, n's, if the number of 
+ times the characters appears is not exactly 1.
 
-Reads a line of input where the first token is a single
-character and the rest of the line is the phrase to search.
-Prints the number of occurrences and uses the plural form
-like "n's" when the count is not exactly 1.
+Ex: If the input is:
 
-Examples (input -> output):
-  n Monday        -> 1 n
-  z Today is Monday -> 0 z's
-  n It's a sunny day -> 2 n's
-  n Nobody         -> 0 n's
+n Monday
+the output is:
 
-Behavior:
-  - Case-sensitive ("n" != "N").
-  - If the input doesn't contain a phrase, phrase may be empty.
+1 n
+Ex: If the input is:
+
+z Today is Monday
+the output is:
+
+0 z's
+Ex: If the input is:
+
+n It's a sunny day
+the output is:
+
+2 n's
+Case matters. n is different than N.
+
+Ex: If the input is:
+
+n Nobody
+the output is:
+
+0 n's
+
 """
 
-import sys
+user_input = input("enter your stuff:")
+user_input.split
 
-
-def format_output(ch: str, count: int) -> str:
-	"""Return the correctly formatted output string.
-
-	If count == 1, return "1 <ch>". Otherwise return "<count> <ch>'s".
-	"""
-	if count == 1:
-		return f"{count} {ch}"
-	else:
-		return f"{count} {ch}'s"
-
-
-def main() -> None:
-	# Read the entire input line from stdin
-	raw = sys.stdin.read().strip()
-
-	# If no input was provided, nothing to do
-	if not raw:
-		return
-
-	# Split into tokens: first token is character, rest is phrase
-	parts = raw.split(None, 1)  # split on whitespace at most once
-
-	ch = parts[0]
-	phrase = parts[1] if len(parts) > 1 else ""
-
-	# Ensure the character input is exactly one character
-	if len(ch) != 1:
-		# If user provided something like "n Monday" this won't happen,
-		# but guard to avoid misbehavior; take first character.
-		ch = ch[0]
-
-	count = phrase.count(ch)
-
-	print(format_output(ch, count))
-
-
-if __name__ == "__main__":
-	main()
+for user_input[0] in user_input:
+    print 1
