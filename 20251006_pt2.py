@@ -4,7 +4,7 @@ number = int(input("gimme a number: "))
 while number <= 5:
     print(number)
     if number <= -10:
-        print('thats too long!')
+        print('thats too small!')
         break
     number += 1 
 
