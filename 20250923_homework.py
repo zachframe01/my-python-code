@@ -35,4 +35,3 @@ text = "   / hello world /   "
 print(text)
 print(text.strip())
 '''
-
